@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-manrope: 'Manrope', sans-serif;
+    --font-baloo-bhai: 'Baloo Bhai 2', cursive;
+    --font-baloo-bhaijaan: 'Baloo Bhaijaan 2', cursive;
+
+    --color-primary: #1873D3;
+    --color-primary-dark: #1237A1;
+    --color-primary-darker: #00017A;
+    --color-secondary: #FFDE00;
+    --color-secondary-dark: #FFB900;
+}
+
+/* Glassmorphism */
+.glass-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(346deg, rgba(150, 150, 150, 0) 0%, rgba(150, 150, 150, 0.3) 75%) padding-box,
+        linear-gradient(346deg, rgba(150, 150, 150, 0) 0%, rgba(150, 150, 150, 0.1) 78%) border-box;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-dark {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 3rem;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(346deg, rgba(0, 0, 0, 0) 0%, rgba(50, 50, 50, 0.5) 75%) padding-box,
+        linear-gradient(346deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 78%) border-box;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.glass-title {
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.glass-value {
+    color: white;
+    font-weight: 800;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.glass-label {
+    color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Leaflet  */
+.custom-popup .leaflet-popup-content-wrapper {
+    padding: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.custom-popup .leaflet-popup-content {
+    margin: 0;
+    padding: 0;
+}
+
+.custom-popup .leaflet-popup-content>div {
+    padding: 0;
+}
+
+.custom-popup .leaflet-popup-content>div>img {
+    margin: 0 !important;
+    width: 100% !important;
+    border-radius: 16px 16px 0 0;
+}
+
+.custom-popup .leaflet-popup-close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white !important;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 0;
+    text-align: center;
+    line-height: 28px;
+}
+
+.custom-popup .leaflet-popup-close-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.3);
+}
+
+/* Filter */
+.filter-btn.active-filter {
+    background-color: #FF9E16 !important;
+}
+
+.filter-btn.active-filter:hover {
+    background-color: #FF9E16 !important;
+}
+
+.marker-grayed {
+    filter: grayscale(100%) opacity(1);
+}
